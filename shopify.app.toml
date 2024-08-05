@@ -1,0 +1,29 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+client_id = "ef9daa829354222328633338b7da293a"
+name = "delivery-custom"
+handle = "delivery-custom-8"
+application_url = "https://sip-intimate-societies-floral.trycloudflare.com"
+embedded = true
+
+[build]
+automatically_update_urls_on_dev = true
+dev_store_url = "custom-checkout-extensibility.myshopify.com"
+include_config_on_deploy = true
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "write_delivery_customizations,write_products"
+
+[auth]
+redirect_urls = [
+  "https://sip-intimate-societies-floral.trycloudflare.com/auth/callback",
+  "https://sip-intimate-societies-floral.trycloudflare.com/auth/shopify/callback",
+  "https://sip-intimate-societies-floral.trycloudflare.com/api/auth/callback"
+]
+
+[webhooks]
+api_version = "2024-07"
+
+[pos]
+embedded = false
